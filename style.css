@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #58c6d8, #8ed8f1);
+  color: #222;
+}
+.main-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #f9fcff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+header { text-align: center; }
+header h1 { margin: 0; color: #11415c; }
+
+.datetime-card {
+  background: linear-gradient(180deg,#324d64,#3f5b78);
+  color: white; text-align: center;
+  padding: 20px; border-radius: 10px; margin: 15px 0;
+}
+.datetime-card #currentTime { font-size: 32px; font-weight: 600; }
+
+.data-cards {
+  display: flex; gap: 12px; justify-content: space-between;
+}
+.card {
+  flex: 1; text-align: center;
+  background: #409dd6; color: white;
+  border-radius: 10px; padding: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card h3 { margin: 0; font-size: 16px; }
+.card p { font-size: 28px; font-weight: 600; margin: 10px 0 2px; }
+
+.comfort-section {
+  background: #fff; margin-top: 16px; border-radius: 10px;
+  padding: 16px; text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.status {
+  display: inline-block; padding: 10px 18px; border-radius: 8px;
+  color: white; font-weight: 600;
+}
+.status.safe { background: #2ecc71; }
+.status.caution { background: #ffb300; color:#000; }
+.status.danger { background: #f44336; }
+.status.extreme { background: #8b0000; }
+
+.map-section {
+  margin-top: 18px; background: #fff; padding: 12px;
+  border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+#map { height: 300px; width: 100%; border-radius: 10px; margin-top: 10px; }
+
+.chart-section {
+  background: #fff; margin-top: 18px;
+  border-radius: 10px; padding: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+#trendChart { max-height: 300px; }
+
+.controls { text-align: center; margin-top: 16px; }
+button {
+  background: #1e88e5; color: white;
+  border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer;
+}
+button:hover { opacity: 0.9; }
+footer { text-align: center; margin-top: 12px; color: #777; font-size: 13px; }

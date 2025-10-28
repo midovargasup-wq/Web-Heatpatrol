@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HeatPatrol Real-Time Monitoring</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="main-wrapper">
+    <header>
+      <h1>HeatPatrol Real-Time Monitoring</h1>
+      <p>Real-time temperature, humidity, and heat index monitoring</p>
+    </header>
+
+    <section class="datetime-card">
+      <div id="currentDate">--</div>
+      <div id="currentTime">--:--:--</div>
+      <div>Asia/Manila</div>
+    </section>
+
+    <section class="data-cards">
+      <div class="card blue">
+        <h3>Temperature</h3>
+        <p id="tempValue">--</p><small>°C</small>
+      </div>
+      <div class="card blue">
+        <h3>Humidity</h3>
+        <p id="humValue">--</p><small>%</small>
+      </div>
+      <div class="card blue">
+        <h3>Heat Index</h3>
+        <p id="hiValue">--</p><small>°C</small>
+      </div>
+    </section>
+
+    <section class="comfort-section">
+      <h2>Comfort Level</h2>
+      <div id="statusBadge" class="status safe">SAFE</div>
+      <div class="gps-info">
+        Latitude: <span id="latValue">--</span> | 
+        Longitude: <span id="lonValue">--</span> | 
+        Altitude: <span id="altValue">--</span> m
+      </div>
+      <div class="unlock">Storage Unlocked: <strong id="unlockFlag">No</strong></div>
+    </section>
+
+    <section class="map-section">
+      <h2>Real-Time Location</h2>
+      <div id="map"></div>
+    </section>
+
+    <section class="chart-section">
+      <h2>Heat Index Trend (Last 10 Readings)</h2>
+      <canvas id="trendChart"></canvas>
+    </section>
+
+    <section class="controls">
+      <button id="btnRefresh">Simulate Reading</button>
+      <label><input type="checkbox" id="autoRefresh" checked> Auto-refresh every 10s</label>
+      <div class="last-updated" id="lastUpdated">Last updated: --</div>
+    </section>
+
+    <footer>© 2025 HeatPatrol Monitoring System</footer>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
